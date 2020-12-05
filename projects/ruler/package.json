@@ -1,5 +1,5 @@
 {
-  "name": "ruler",
+  "name": "@ngx-canvas/ruler",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.2.0",
