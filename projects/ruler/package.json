@@ -1,11 +1,32 @@
 {
   "name": "@ngx-canvas/ruler",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "peerDependencies": {
     "@angular/common": "^10.2.0",
     "@angular/core": "^10.2.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngx-canvas/ruler.git"
+  },
+  "keywords": [
+    "ngx",
+    "canvas",
+    "ruler",
+    "ngx-canvas"
+  ],
+  "author": "claytoncc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ngx-canvas/ruler/issues"
+  },
+  "homepage": "https://github.com/ngx-canvas/ruler#readme"
 }

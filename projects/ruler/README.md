@@ -1,24 +1,40 @@
-# Ruler
+<img src='https://raw.githubusercontent.com/ngx-canvas/core/master/projects/demo/src/assets/icon.png' width='100'>
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+# @ngx-canvas/ruler
 
-## Code scaffolding
+This is a Typescript Library that makes canvas intergrations easier!
 
-Run `ng generate component component-name --project ruler` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ruler`.
-> Note: Don't forget to add `--project ruler` or else it will be added to the default project in your `angular.json` file. 
+## Installation
 
-## Build
+```sh
+$ npm i --save @ngx-canvas/ruler
+```
 
-Run `ng build ruler` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Publishing
+Add package to NgModule imports:
 
-After building your library with `ng build ruler`, go to the dist folder `cd dist/ruler` and run `npm publish`.
+```js
+import { RulerModule } from '@ngx-canvas/ruler';
 
-## Running unit tests
+@NgModule({
+    ...
+    imports: [
+        RulerModule
+    ]
+    ...
+})
+```
 
-Run `ng test ruler` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Add component to your page:
+```html
+<ruler>
+    ...
+</ruler>
+```
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+[![DEONATE](https://raw.githubusercontent.com/ngx-canvas/core/master/projects/demo/src/assets/donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZVDGBQ9HJCE4Y&source=url)
