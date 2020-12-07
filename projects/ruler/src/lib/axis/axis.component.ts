@@ -78,11 +78,6 @@ export class RulerAxisComponent implements OnChanges, AfterViewInit {
             let largeTickX = 0;
             let largeTickY = 0;
 
-            // this.context.beginPath();
-            // this.context.font = "9px Arial";
-            // this.context.fillText(JSON.stringify(largeTickX - 100), largeTickX + 5, 8);
-            // this.context.closePath();
-
             for (let i = 0; i < 100000; i++) {
                 largeTickX += 100;
                 largeTickY += 100;
@@ -163,14 +158,6 @@ export class RulerAxisComponent implements OnChanges, AfterViewInit {
             } else if (this.type == 'y') {
                 this.renderer.setStyle(this.canvas, 'margin-top', ['-', event.y, 'px'].join(''));
             };
-        });
-
-        this.service.width.subscribe(width => {
-            console.log(width);
-        });
-
-        this.service.height.subscribe(height => {
-            console.log(height);
         });
     };
 
