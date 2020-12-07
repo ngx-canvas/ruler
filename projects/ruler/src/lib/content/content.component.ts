@@ -16,6 +16,10 @@ export class RulerContentComponent implements AfterContentInit {
 
     public element: HTMLElement;
 
+    public reset() {
+        this.element.scrollTo(0, 0);
+    };
+
     ngAfterContentInit(): void {
         this.element.addEventListener('scroll', (event: any) => {
             this.service.scroll.next({
