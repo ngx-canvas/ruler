@@ -12,7 +12,11 @@ export class RulerComponent implements OnChanges, AfterContentInit {
     @Input('width') public width: number = 0;
     @Input('height') public height: number = 0;
 
-    constructor() {};
+    constructor(private el: ElementRef) {
+        this.element = this.el.nativeElement;
+    };
+
+    public element: HTMLElement;
 
     ngOnChanges(): void { };
 
