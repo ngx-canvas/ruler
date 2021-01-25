@@ -24,9 +24,9 @@ export class RulerComponent implements OnInit, OnChanges, AfterViewInit {
     public ContextY: CanvasRenderingContext2D;
     public RulerContent: HTMLElement;
 
-    public reset() { };
-    
-    public scroll() { };
+    public reset() {
+        this.RulerContent.scrollTo(0, 0);
+    };
 
     public process(type) {
         if (type == 'x') {

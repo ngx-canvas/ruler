@@ -4,6 +4,8 @@
 
 This is a Typescript Library that makes canvas intergrations easier!
 
+[Official Documentation](https://ngxcanvas.com/docs/ruler)
+
 ## Installation
 
 ```sh
