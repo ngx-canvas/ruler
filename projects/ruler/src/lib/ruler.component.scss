@@ -1,50 +1,40 @@
-ruler {
-    width: 100%;
-    height: 100%;
+button {
+    width: 15px;
+    border: none;
+    height: 15px;
+    outline: none;
+    z-index: 100;
+    position: absolute;
+    background-color: #e57373;
+}
+.axis {
+    z-index: 50;
     display: block;
     overflow: hidden;
-    position: relative;
-    background-color: #FAFAFA;
-    button {
-        width: 15px;
-        border: none;
-        height: 15px;
-        outline: none;
-        z-index: 100;
-        position: absolute;
-        border-right: 1px solid #BDBDBD;
-        border-bottom: 1px solid #BDBDBD;
-        background-color:#E57373
-    }
-    .axis {
-        z-index: 50;
-        display: block;
-        overflow: hidden;
-        position: absolute;
-        background-color: #FFF;
-    }
-    .x-axis {
-        top: 0px;
-        left: 15px;
-        right: 0px;
-        height: 15px;
-    }
-    .y-axis {
-        top: 15px;
-        left: 0px;
-        width: 15px;
-        bottom: 0px;
-    }
-    .content {
-        top: 15px;
-        left: 15px;
-        right: 0px;
-        bottom: 0px;
-        padding: 0px;
-        z-index: 100;
-        display: block;
-        overflow: auto;
-        position: absolute;
-        background-color: #FAFAFA;
-    }
+    position: absolute;
+    background-color: #fff;
+}
+.x-axis {
+    top: 0px;
+    left: 15px;
+    right: 0px;
+    height: 15px;
+}
+.y-axis {
+    top: 15px;
+    left: 0px;
+    width: 15px;
+    bottom: 0px;
+}
+.content {
+    top: 15px;
+    left: 15px;
+    right: 0px;
+    bottom: 0px;
+    padding: 0px;
+    z-index: 100;
+    display: block;
+    overflow: auto;
+    position: absolute;
+    background-color: #fafafa;
 }

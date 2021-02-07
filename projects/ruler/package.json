@@ -1,6 +1,6 @@
 {
   "name": "@ngx-canvas/ruler",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^10.2.0",
     "@angular/core": "^10.2.0"
