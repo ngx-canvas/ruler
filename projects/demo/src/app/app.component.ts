@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
+    public width = 1000;
+    public height = 1000;
+
     constructor() { }
 
 }
