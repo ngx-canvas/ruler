@@ -1,6 +1,7 @@
 import { AxisX } from './axis-x';
 import { AxisY } from './axis-y';
-import { Input, Component, Renderer2, OnChanges, ElementRef, AfterViewInit } from '@angular/core';
+import { interval } from 'rxjs';
+import { Input, Component, Renderer2, OnChanges, OnDestroy, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
     selector: 'ruler',
@@ -8,7 +9,7 @@ import { Input, Component, Renderer2, OnChanges, ElementRef, AfterViewInit } fro
     templateUrl: './ruler.component.html'
 })
 
-export class RulerComponent implements OnChanges, AfterViewInit {
+export class RulerComponent implements OnChanges, OnDestroy, AfterViewInit {
 
     @Input('color') public color = '#BDBDBD';
     @Input('margin') public margin = 100;
@@ -17,6 +18,8 @@ export class RulerComponent implements OnChanges, AfterViewInit {
 
     @Input('width') private width: number = 0;
     @Input('height') private height: number = 0;
+
+    private subscriptions: any = {};
 
     constructor(private el: ElementRef, private renderer: Renderer2) {
         this.renderer.setStyle(this.el.nativeElement, 'width', '100%');
@@ -67,17 +70,22 @@ export class RulerComponent implements OnChanges, AfterViewInit {
         this.process();
     }
 
+    ngOnDestroy(): void {
+        this.subscriptions.interval.unsubscribe();
+    }
+
     ngAfterViewInit(): void {
         let width = 0;
         let height = 0;
         let content: HTMLElement = document.getElementById('ruler-content');
-        setInterval(() => {
+
+        this.subscriptions.interval = interval(1000).subscribe(() => {
             if (content.scrollWidth != width || content.scrollHeight != height) {
                 width = content.scrollWidth;
                 height = content.scrollHeight;
                 this.process();
             };
-        }, 1000);
+        });
 
         this.renderer.listen(document.getElementById('ruler-content'), 'scroll', (event) => {
             this.renderer.setStyle(document.getElementById('x-axis'), 'margin-left', ['-', event.currentTarget.scrollLeft, 'px'].join(''));
